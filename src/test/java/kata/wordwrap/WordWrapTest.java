@@ -18,4 +18,10 @@ public class WordWrapTest {
         assertThat(result).isEqualTo("abso\nlute\nly");
     }
 
+    @Test
+    public void should_not_wrap_if_word_exactly_as_large_as_width() {
+        String result = WordWrap.wrap("absolutely", 12);
+        assertThat(result).isEqualTo("absolutely");
+    }
+
 }
