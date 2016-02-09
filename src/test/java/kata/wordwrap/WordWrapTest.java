@@ -24,4 +24,10 @@ public class WordWrapTest {
         assertThat(result).isEqualTo("absolutely");
     }
 
+    @Test
+    public void should_wrap_around_spaces() {
+        String result = WordWrap.wrap("four cheese pizza", 6);
+        assertThat(result).isEqualTo("four\ncheese\npizza");
+    }
+
 }
